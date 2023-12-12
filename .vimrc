@@ -24,11 +24,12 @@ set hlsearch  " search highlighting.
 set incsearch " incremental search that shows partial matches
 set smartcase " auto switch case-sensitive search
 
-set wrap         " wrap lines
-set ruler        " show cursor position
-set wildmenu     " turn on wild menu
-set number       " show line numbers
-set laststatus=2 " show statusbar
+set wrap                       " wrap lines
+set ruler                      " show cursor position
+set wildmenu                   " turn on wild menu
+set wildmode=longest:list,full " customize menu for command completion
+set number                     " show line numbers
+set laststatus=2               " show statusbar
 
 set background=dark " use dark colors
 syntax enable       " syntax highlighting
@@ -55,10 +56,8 @@ vnoremap <leader>p "+p
 nnoremap <leader>p "+p
 
 " change, show, close buffers
-nnoremap bn :bnext<CR>
-nnoremap bp :bprevious<CR>
-nnoremap bc :bdelete<CR>
-nnoremap bl :ls<CR>
+nnoremap gn :bnext<CR>
+nnoremap gp :bprevious<CR>
 
 " turn of search highlighting
 nnoremap <leader>h :noh<CR>
